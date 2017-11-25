@@ -5,7 +5,7 @@ def ResizeWindow(windowName, cx, cy, x=0, y=0):
     hWnd = ctypes.windll.user32.FindWindowA(0, windowName)
     print cx
     print cy
-    if (x==0 and y==0):
+    if (x==-1 and y==-1):
         print cx
         print cy
         ctypes.windll.user32.SetWindowPos(hWnd, 0, x, y, cx, cy, 2) #handle, hWndInsertAfter, xpos, ypos, width, height, SWP_NOMOVE
